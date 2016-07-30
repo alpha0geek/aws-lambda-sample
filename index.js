@@ -4,7 +4,7 @@ var stream = require('stream')
 
 exports.handler = function( event, context ) {
 
-	var php = spawn('./php' ['-v'])
+	var php = spawn('./php', ['-v'])
 	php.stdin.setEncoding = 'utf-8';
 	php.stdin.write(JSON.stringify(event) + "\n")
 	php.stdin.end()
