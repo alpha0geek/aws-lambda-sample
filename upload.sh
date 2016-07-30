@@ -1,11 +1,6 @@
 #!/bin/bash
-#
-# upload.sh
-# Zip and upload lambda function
-#
 
 program=`basename $0`
-
 set -o errexit
 
 function usage() {
@@ -31,6 +26,10 @@ zip_package() {
 }
 
 upload_package() {
+	
+aws lambda delete-function \
+	--function-name $main
+	
   aws lambda create-function \
      --region $region \
      --role $role\
