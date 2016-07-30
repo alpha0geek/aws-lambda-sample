@@ -38,7 +38,7 @@ upload_package() {
      --zip-file fileb://$zip \
      --handler $main.handler \
      --runtime nodejs4.3 \
-     --timeout 120 \
+     --timeout 60 \
      --memory-size 128
 }
 
