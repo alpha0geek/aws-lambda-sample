@@ -15,7 +15,7 @@ use Aws\Sns\MessageValidator;
     $data = json_decode($body,true);
 	
 	
-	$message = Message($data);
+	$message = new Message($data);
 	echo $message->get('Message');
 		
 	//if ($message) 
