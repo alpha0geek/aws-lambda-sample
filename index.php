@@ -6,16 +6,16 @@ use Aws\Sns\SnsClient;
 use Aws\Sns\Message;
 use Aws\Sns\MessageValidator;
 
-/*
+
     $body = '';
     while (FALSE !== ($line = fgets(STDIN))) {
 		$body.= $line;
     }
 
     $message = json_decode($body,true);
-*/	
 	
-	$message = Message::fromRawPostData();
+	
+	//$message = Message::fromRawPostData();
 	echo $message->get('Message');
 		
 	//if ($message) 
