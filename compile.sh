@@ -2,6 +2,7 @@
 
 PWD=pwd
 
+sudo yum -y groupinstall "Development tools"
 sudo yum install -y libexif-devel libjpeg-devel gd-devel curl-devel openssl-devel libxml2-devel
 
 cd /tmp
