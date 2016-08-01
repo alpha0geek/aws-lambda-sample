@@ -13,10 +13,12 @@ use Aws\Sns\MessageValidator;
     }
 
  
+ 	echo $body;
+	exit;
  	//$body = file_get_contents('mess.txt');
     $data = json_decode($body,true);
 	
-	//print_r( $data);
+	print_r( $data);
 	//exit;
 	
 try {
