@@ -15,25 +15,27 @@ then
 fi
 
 main=${1%.js}
-file="./${main}.js ./index.php ./php"
+file="./${main}.js ./index.php ./php ./vendor"
 zip="./${main}.zip"
+functioname = "lambda-php-sns-rds-demo"
 
 role="arn:aws:iam::671100899131:role/service-role/newrole"
 region="ap-southeast-2"
 
 zip_package() {
-  zip -r $zip $file 
+	rm -f ./$zip
+	zip -r $zip $file 
 }
 
 upload_package() {
 	
 aws lambda delete-function \
-	--function-name $main
+	--function-name $functioname
 	
   aws lambda create-function \
      --region $region \
      --role $role\
-     --function-name $main  \
+     --function-name $functioname  \
      --zip-file fileb://$zip \
      --handler $main.handler \
      --runtime nodejs4.3 \
