@@ -17,7 +17,7 @@ fi
 main=${1%.js}
 file="./${main}.js ./index.php ./php ./vendor"
 zip="./${main}.zip"
-functioname = "lambda-php-sns-rds-demo"
+functioname="lambda-php-sns-rds-demo"
 
 role="arn:aws:iam::671100899131:role/service-role/newrole"
 region="ap-southeast-2"
