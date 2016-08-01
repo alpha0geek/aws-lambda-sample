@@ -365,5 +365,58 @@
             "s3",
             "sdk"
         ]
+    },
+    {
+        "name": "aws/aws-php-sns-message-validator",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/aws/aws-php-sns-message-validator.git",
+            "reference": "c9fce7635417bcc75383ec5f6fa3790a4d9729b8"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/aws/aws-php-sns-message-validator/zipball/c9fce7635417bcc75383ec5f6fa3790a4d9729b8",
+            "reference": "c9fce7635417bcc75383ec5f6fa3790a4d9729b8",
+            "shasum": ""
+        },
+        "require": {
+            "ext-openssl": "*",
+            "php": ">=5.4"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.0",
+            "squizlabs/php_codesniffer": "^2.3"
+        },
+        "time": "2015-09-03 20:53:53",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Aws\\Sns\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Amazon Web Services",
+                "homepage": "http://aws.amazon.com"
+            }
+        ],
+        "description": "Amazon SNS message validation for PHP",
+        "homepage": "http://aws.amazon.com/sdkforphp",
+        "keywords": [
+            "SNS",
+            "amazon",
+            "aws",
+            "cloud",
+            "message",
+            "sdk",
+            "webhooks"
+        ]
     }
 ]

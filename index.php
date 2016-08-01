@@ -3,6 +3,8 @@
 require dirname( __FILE__ ) . '/vendor/autoload.php';
 
 use Aws\Sns\SnsClient;
+use Aws\Sns\Message;
+use Aws\Sns\MessageValidator;
 
 /*
     $body = '';
@@ -13,7 +15,7 @@ use Aws\Sns\SnsClient;
     $message = json_decode($body,true);
 */	
 	
-	$message = Aws\Sns\MessageValidator\Message::fromRawPostData();
+	$message = Message::fromRawPostData();
 	echo $message->get('Message');
 		
 	//if ($message) 
