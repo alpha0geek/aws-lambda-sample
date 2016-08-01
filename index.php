@@ -12,7 +12,7 @@ use Aws\Sns\SnsClient;
     $message = json_decode($body,true);
 	
 	if ($message) {
-		echo $message['Message'];
+		print( $message );
 	}
 
 
