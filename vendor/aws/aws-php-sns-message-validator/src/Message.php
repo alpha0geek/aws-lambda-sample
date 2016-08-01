@@ -13,7 +13,7 @@ class Message implements \ArrayAccess, \IteratorAggregate
         'TopicArn',
         'Type',
         'Signature',
-        'SigningCertUrl',
+        'SigningCertURL',
         'SignatureVersion',
     ];
 
