@@ -12,10 +12,10 @@ use Aws\Sns\MessageValidator;
 		$body.= $line;
     }
 
-    $message = json_decode($body,true);
+    $data = json_decode($body,true);
 	
 	
-	//$message = Message::fromRawPostData();
+	$message = Message($data);
 	echo $message->get('Message');
 		
 	//if ($message) 
