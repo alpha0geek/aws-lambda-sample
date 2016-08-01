@@ -2,7 +2,7 @@
 
 PWD=pwd
 
-yum install -y libexif-devel libjpeg-devel gd-devel curl-devel openssl-devel libxml2-devel
+sudo yum install -y libexif-devel libjpeg-devel gd-devel curl-devel openssl-devel libxml2-devel
 
 cd /tmp
 wget http://ro1.php.net/get/php-5.6.5.tar.gz/from/this/mirror -O php-5.6.5.tar.gz
