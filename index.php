@@ -12,17 +12,25 @@ use Aws\Sns\MessageValidator;
 		$body.= $line;
     }
 
-    $data = json_decode($body,true);
+ 
+// 	$body = file_get_contents('mess.txt');
+    $mess = json_decode($body,true);
 	
+	//print_r( $data);
+	//exit;
 	
-	$message = new Message($data);
-	echo $message->get('Message');
-		
-	//if ($message) 
-	{
-		
-	//	print_r( $message );
+try {
+	
+	$message = new Message($mess);
+	
+	$validator = new MessageValidator();
+	if ($validator->isValid($message)) {
+		echo $message->get('Message');	   
 	}
+		
+} catch (Exception $e) {
+    echo $e->getMessage() . PHP_EOL;
+}
 
 
 ?>
