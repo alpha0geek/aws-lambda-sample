@@ -15,7 +15,7 @@ then
 fi
 
 main=${1%.js}
-file="./${main}.js ./index.php ./php ./vendor"
+file="./${main}.js ./index.php ./php"
 zip="./${main}.zip"
 functioname="lambda-php-sns-rds-demo"
 
