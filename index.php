@@ -13,8 +13,9 @@ use Aws\Sns\MessageValidator;
     }
 
  
- 	echo $body;
+ 	echo "body" . $body;
 	exit;
+	
  	//$body = file_get_contents('mess.txt');
     $data = json_decode($body,true);
 	
