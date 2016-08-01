@@ -12,8 +12,8 @@
     $data = json_decode($body,true);
 	$message = $data['Records'][0]['Sns']["Message"];
 	
-	echo "Sns Message Received: " . $message . PHP_EOL;
-	flush();
+	echo "Sns Message Received: " . $message;
+	//flush();
 	//print_r( $data);
 
 ?>
