@@ -29,7 +29,7 @@ zip_package() {
 
 upload_package() {
 	
-#aws lambda delete-function --function-name $functioname
+aws lambda delete-function --function-name $functioname
 	
   aws lambda create-function \
      --region $region \
