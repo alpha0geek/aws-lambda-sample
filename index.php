@@ -18,18 +18,21 @@ use Aws\Sns\MessageValidator;
     $data = json_decode($body,true);
 	$data = $data['Records'][0]['Sns'];
 	
-	//print_r( $data); exit;
+	//print_r( $data); 
+	//exit;
 	
 try {
 	
 	$message = new Message($data);
 	
+	/*
 	$validator = new MessageValidator();
 	if ($validator->isValid($message)) {
 		echo "Sns Message Received: " . $message->get('Message'); 
 	}
+	*/
 	
-	echo "end.";
+	echo "Sns Message Received: " . $message->get('Message');
 	
 } catch (Exception $e) {
     echo $e->getMessage() . PHP_EOL;
