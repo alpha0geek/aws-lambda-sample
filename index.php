@@ -1,12 +1,19 @@
 <?php
+
+require dirname( __FILE__ ) . '/vendor/autoload.php';
+
+use Aws\Sns\SnsClient;
+
     $body = '';
     while (FALSE !== ($line = fgets(STDIN))) {
-	$body.= $line;
+		$body.= $line;
     }
 
-    $event = json_decode($body,true);
-    var_dump($event);
+    $message = json_decode($body,true);
+	
+	if ($message) {
+		echo $message['Message'];
+	}
 
-    print_r(get_loaded_extensions());
 
 ?>
