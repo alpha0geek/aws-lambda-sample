@@ -13,12 +13,12 @@ use Aws\Sns\MessageValidator;
     }
 
  
-// 	$body = file_get_contents('mess.txt');
-    $mess = json_decode($body,true);
+ 	//$body = file_get_contents('mess.txt');
+    $data = json_decode($body,true);
 	
-	//print_r( $data);
-	//exit;
-	
+	print_r( $data);
+	exit;
+/*	
 try {
 	
 	$message = new Message($mess);
@@ -31,6 +31,6 @@ try {
 } catch (Exception $e) {
     echo $e->getMessage() . PHP_EOL;
 }
-
+*/
 
 ?>
